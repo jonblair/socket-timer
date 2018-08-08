@@ -4,7 +4,7 @@ const  socket = openSocket('http://localhost:8000');
 
 function subscribeToTimer(cb) {
   socket.on('timer', timestamp => cb(null, timestamp));
-  socket.emit('subscribeToTimer', 1000);
+  socket.emit('subscribeToTimer', 500);
 }
 
 export { subscribeToTimer };
